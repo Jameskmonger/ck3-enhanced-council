@@ -5,6 +5,7 @@ namespace = jkm_ec_defend_liege
 #	0001 - 0999	   #
 ####################
 
+# We can use this activity to set up state
 jkm_ec_defend_liege.0002 = {
 	type = character_event
 	title = "Defend Liege"
@@ -87,6 +88,7 @@ jkm_ec_defend_liege.1001 = {
 #	9001 - 9999	 #
 ##################
 
+# We can use these events to complete the activity, give rewards, and clean up any state we may have set up
 jkm_ec_defend_liege.9001 = {
 	type = character_event
 	title = "Defend Liege - End"

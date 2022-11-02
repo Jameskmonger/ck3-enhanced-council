@@ -3,10 +3,12 @@ jkm_ec_spymaster_activity_defend_liege = {
 	solo = yes
 
 	on_spawn = {
+		# Add the character to the activity
 		invite_character_to_activity = activity_owner
 		accept_invitation_for_character = activity_owner
 
 		activity_owner = {
+			# Run the initial events
 			trigger_event = {
 				on_action = jkm_ec_defend_liege_start_events
 			}
@@ -14,6 +16,7 @@ jkm_ec_spymaster_activity_defend_liege = {
 	}
 
 	on_activate = {
+		# Run random events
 		activity_owner = {
 			trigger_event = {
 				on_action = jkm_ec_defend_liege_random_pulse

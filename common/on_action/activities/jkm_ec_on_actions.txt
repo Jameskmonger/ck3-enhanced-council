@@ -1,9 +1,11 @@
+# Events run at the start of the "Defend Liege" activity
 jkm_ec_defend_liege_start_events = {
 	events = {
 		jkm_ec_defend_liege.0002
 	}
 }
 
+# Random events that can be triggered during the "Defend Liege" activity
 jkm_ec_defend_liege_random_pulse = {
 	random_events = {
 		100 = jkm_ec_defend_liege.1001
@@ -11,6 +13,7 @@ jkm_ec_defend_liege_random_pulse = {
 	fallback = jkm_ec_defend_liege_end_events
 }
 
+# Events run at the end of the "Defend Liege" activity
 jkm_ec_defend_liege_end_events = {
 	events = {
 		jkm_ec_defend_liege.9001

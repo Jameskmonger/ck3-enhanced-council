@@ -8,23 +8,23 @@ jkm_ec_spymaster_defend_liege_decision = {
 	
 	is_shown = {
 		is_landed = yes
+
+		# We must have a liege
 		exists = liege
 
-		# TODO check that liege is not us
-		# TODO check that we are our spymaster's liege
+		# We must be our liege's spymaster
+		liege.cp:councillor_spymaster = this
 	}
 	
 	is_valid_showing_failures_only = {
 		is_available_adult = yes
 		is_in_an_activity = no
-
-		# TODO check that not in jail
-		# TODO check not infirm
 	}
 
 	confirm_text = "Confirm"
 
 	effect = {
+		# Maybe unnecessary.. look into removal
 		set_variable = {
 			name = petition_liege_scope
 			value = liege
