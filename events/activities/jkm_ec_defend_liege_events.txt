@@ -7,18 +7,18 @@ namespace = jkm_ec_defend_liege
 
 jkm_ec_defend_liege.0002 = {
 	type = character_event
-	title = jkm_ec_defend_liege.0002.t
+	title = "Defend Liege"
 	left_portrait = root
-	right_portrait = root
+	right_portrait = root.liege
 
 	desc = {
-		desc = jkm_ec_defend_liege.0002.desc_opening
+		desc = "You travel to your liege's court to spend time investigating his enemies. You are not sure what you will find, but you are sure that you will find something."
 	}
 
-	theme = hunt_activity
+	theme = bastardy
 
 	option = {
-		name = jkm_ec_defend_liege.0002.a
+		name = "For the future of the realm!"
 	}
 }
 
@@ -27,57 +27,51 @@ jkm_ec_defend_liege.0002 = {
 #	1001 - 8999			#
 #########################
 
+# Visited by Ambitious vassal
 jkm_ec_defend_liege.1001 = {
 	type = character_event
-	title = jkm_ec_defend_liege.1001.t
+	title = "Defend Liege - Ambitious Vassal"
 	left_portrait = root
-	right_portrait = root
+	right_portrait = root.liege
 
 	desc = {
-		desc = jkm_ec_defend_liege.1001.desc_opening
+		desc = "You notice that one of the other vassals has visited your liege's court a number of times recently. For most, this would be a sign of loyalty, but you know that this vassal is ambitious. You are sure that he is trying to curry favor with your liege... but for what purpose?"
 	}
 
-	theme = hunt_activity
+	theme = bastardy
 
 	trigger = {
 		always = yes
 	}
 
+	# Report to the liege
 	option = {
-		name = jkm_ec_defend_liege.1001.a
-	}
+		name = "Tell the liege immediately"
+		flavor = "It is your duty to report this to your liege."
 
-	after = {
-		trigger_event = {
-			id = jkm_ec_defend_liege.1002
-			days = { 14 20 }
+		stress_impact = {
+			honest = minor_stress_impact_loss
+			diligent = minor_stress_impact_loss
 		}
 	}
-}
 
-# This event is called from 1001
-jkm_ec_defend_liege.1002 = {
-	type = character_event
-	title = jkm_ec_defend_liege.1002.t
-	left_portrait = root
-	right_portrait = root
-
-	desc = {
-		desc = jkm_ec_defend_liege.1002.desc_opening
-	}
-
-	theme = hunt_activity
-
-	trigger = {
-		always = yes
-	}
-
+	# Investigate further
 	option = {
-		name = jkm_ec_defend_liege.1002.a
+		name = "Investigate further"
+		flavor = "Maybe there is more to this than meets the eye"
 	}
 
+	# Put in a good word for me?
 	option = {
-		name = jkm_ec_defend_liege.1002.b
+		name = "'Put in a good word for me?'"
+		flavor = "Maybe these meetings could turn in my favour"
+
+		stress_impact = {
+			honest = minor_stress_impact_gain
+			diligent = minor_stress_impact_gain
+			shy = minor_stress_impact_gain
+			deceitful = minor_stress_impact_loss
+		}
 	}
 
 	after = {
@@ -95,18 +89,18 @@ jkm_ec_defend_liege.1002 = {
 
 jkm_ec_defend_liege.9001 = {
 	type = character_event
-	title = jkm_ec_defend_liege.9001.t
+	title = "Defend Liege - End"
 	left_portrait = root
-	right_portrait = root
+	right_portrait = root.liege
 
 	desc = {
-		desc = jkm_ec_defend_liege.9001.desc_opening
+		desc = "You have completed your activity. You have learned a lot about your liege's enemies, and you are sure that you will be able to help him in the future."
 	}
 
-	theme = hunt_activity
+	theme = bastardy
 
 	option = {
-		name = jkm_ec_defend_liege.9001.a
+		name = "For the future of the realm!"
 	}
 
 	after = {		

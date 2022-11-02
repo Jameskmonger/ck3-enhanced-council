@@ -1,7 +1,0 @@
-﻿l_english:
-  jkm_ec_spymaster_defend_liege_decision:0 "Defend Liege"
-  jkm_ec_spymaster_defend_liege_decision_desc:0 "I can spend my evenings investigating the motives of visitors to our court. This should allow me to defend my liege from threats."
-  jkm_ec_spymaster_defend_liege_decision_tooltip:0 "Work long nights to establish the safety of your [liege|E]."
-  jkm_ec_spymaster_defend_liege_decision_confirm:0 "Confirm"
-
-  jkm_ec_spymaster_defend_liege_decision_effects:1 "You spend time at [THIS.Char.GetLiege.GetTitledFirstNamePossessive] court to protect them from threats."

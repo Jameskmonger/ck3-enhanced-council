@@ -1,8 +1,11 @@
 jkm_ec_spymaster_defend_liege_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
-	
-	major = yes
+	title = "Defend Liege"
+	sort_order = 70
 
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	desc = "I can spend my evenings investigating the motives of visitors to our court. This should allow me to defend my liege from threats."
+	selection_tooltip = "Work long nights to establish the safety of your [liege|E]."
+	
 	is_shown = {
 		is_landed = yes
 		exists = liege
@@ -19,14 +22,17 @@ jkm_ec_spymaster_defend_liege_decision = {
 		# TODO check not infirm
 	}
 
+	confirm_text = "Confirm"
+
 	effect = {
 		set_variable = {
 			name = petition_liege_scope
 			value = liege
 			months = 3
 		}
-		custom_tooltip = jkm_ec_spymaster_defend_liege_decision_effects
+		custom_tooltip = "You spend time at [THIS.Char.GetLiege.GetTitledFirstNamePossessive] court to protect them from threats."
 
+		# The tooltip for this is messed up
 		capital_province = {
 			spawn_activity = {
 				type = jkm_ec_spymaster_activity_defend_liege
