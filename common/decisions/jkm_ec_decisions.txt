@@ -1,0 +1,37 @@
+jkm_ec_spymaster_defend_liege_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	
+	major = yes
+
+	is_shown = {
+		is_landed = yes
+		exists = liege
+
+		# TODO check that liege is not us
+		# TODO check that we are our spymaster's liege
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_in_an_activity = no
+
+		# TODO check that not in jail
+		# TODO check not infirm
+	}
+
+	effect = {
+		set_variable = {
+			name = petition_liege_scope
+			value = liege
+			months = 3
+		}
+		custom_tooltip = jkm_ec_spymaster_defend_liege_decision_effects
+
+		capital_province = {
+			spawn_activity = {
+				type = jkm_ec_spymaster_activity_defend_liege
+				owner = root
+			}
+		}
+	}
+}

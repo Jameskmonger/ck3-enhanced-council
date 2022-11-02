@@ -1,0 +1,24 @@
+jkm_ec_spymaster_activity_defend_liege = {
+	expiration_days = 120
+	solo = yes
+
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+
+		activity_owner = {
+			trigger_event = {
+				on_action = jkm_ec_defend_liege_start_events
+			}
+		}
+	}
+
+	on_activate = {
+		activity_owner = {
+			trigger_event = {
+				on_action = jkm_ec_defend_liege_random_pulse
+				days = { 10 20 }
+			}
+		}
+	}
+}

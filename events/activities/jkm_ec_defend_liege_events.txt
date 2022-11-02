@@ -1,0 +1,122 @@
+namespace = jkm_ec_defend_liege
+
+####################
+#	SETUP EVENTS   #
+#	0001 - 0999	   #
+####################
+
+jkm_ec_defend_liege.0002 = {
+	type = character_event
+	title = jkm_ec_defend_liege.0002.t
+	left_portrait = root
+	right_portrait = root
+
+	desc = {
+		desc = jkm_ec_defend_liege.0002.desc_opening
+	}
+
+	theme = hunt_activity
+
+	option = {
+		name = jkm_ec_defend_liege.0002.a
+	}
+}
+
+#########################
+#	RANDOM EVENT CHAINS	#
+#	1001 - 8999			#
+#########################
+
+jkm_ec_defend_liege.1001 = {
+	type = character_event
+	title = jkm_ec_defend_liege.1001.t
+	left_portrait = root
+	right_portrait = root
+
+	desc = {
+		desc = jkm_ec_defend_liege.1001.desc_opening
+	}
+
+	theme = hunt_activity
+
+	trigger = {
+		always = yes
+	}
+
+	option = {
+		name = jkm_ec_defend_liege.1001.a
+	}
+
+	after = {
+		trigger_event = {
+			id = jkm_ec_defend_liege.1002
+			days = { 14 20 }
+		}
+	}
+}
+
+# This event is called from 1001
+jkm_ec_defend_liege.1002 = {
+	type = character_event
+	title = jkm_ec_defend_liege.1002.t
+	left_portrait = root
+	right_portrait = root
+
+	desc = {
+		desc = jkm_ec_defend_liege.1002.desc_opening
+	}
+
+	theme = hunt_activity
+
+	trigger = {
+		always = yes
+	}
+
+	option = {
+		name = jkm_ec_defend_liege.1002.a
+	}
+
+	option = {
+		name = jkm_ec_defend_liege.1002.b
+	}
+
+	after = {
+		trigger_event = {
+			id = jkm_ec_defend_liege.9001 #To complete the activity
+			days = { 14 20 }
+		}
+	}
+}
+
+##################
+#	END EVENTS 	 #
+#	9001 - 9999	 #
+##################
+
+jkm_ec_defend_liege.9001 = {
+	type = character_event
+	title = jkm_ec_defend_liege.9001.t
+	left_portrait = root
+	right_portrait = root
+
+	desc = {
+		desc = jkm_ec_defend_liege.9001.desc_opening
+	}
+
+	theme = hunt_activity
+
+	option = {
+		name = jkm_ec_defend_liege.9001.a
+	}
+
+	after = {		
+		if = {
+			limit = {
+				exists = scope:activity
+			}
+			scope:activity = {
+				complete_activity = yes
+			}
+		}
+	}
+}

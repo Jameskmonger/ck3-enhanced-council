@@ -1,0 +1,18 @@
+jkm_ec_defend_liege_start_events = {
+	events = {
+		jkm_ec_defend_liege.0002
+	}
+}
+
+jkm_ec_defend_liege_random_pulse = {
+	random_events = {
+		100 = jkm_ec_defend_liege.1001
+	}
+	fallback = jkm_ec_defend_liege_end_events
+}
+
+jkm_ec_defend_liege_end_events = {
+	events = {
+		jkm_ec_defend_liege.9001
+	}
+}
