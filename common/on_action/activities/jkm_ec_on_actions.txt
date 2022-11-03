@@ -1,7 +1,7 @@
 # Events run at the start of the "Defend Liege" activity
 jkm_ec_defend_liege_start_events = {
 	events = {
-		jkm_ec_defend_liege.0002
+		jkm_ec_defend_liege.0001
 	}
 }
 

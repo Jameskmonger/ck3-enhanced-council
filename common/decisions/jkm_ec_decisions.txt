@@ -24,13 +24,14 @@ jkm_ec_spymaster_defend_liege_decision = {
 	confirm_text = "Confirm"
 
 	effect = {
-		# Maybe unnecessary.. look into removal
+		custom_tooltip = "You spend time at [THIS.Char.GetLiege.GetTitledFirstNamePossessive] court to protect them from threats."
+
+		# TODO set a proper variable here of defend_liege_scope (and ensure `months` is correct)
 		set_variable = {
 			name = petition_liege_scope
 			value = liege
 			months = 3
 		}
-		custom_tooltip = "You spend time at [THIS.Char.GetLiege.GetTitledFirstNamePossessive] court to protect them from threats."
 
 		# The tooltip for this is messed up
 		capital_province = {

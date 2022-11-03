@@ -1,34 +1,56 @@
 namespace = jkm_ec_defend_liege
 
-####################
-#	SETUP EVENTS   #
-#	0001 - 0999	   #
-####################
+##################################################
+# # ENHANCED COUNCIL
+# # # SPYMASTER - DEFEND LIEGE EVENTS
+#
+# # These events relate to the "Defend Liege" activity from the Enhanced Council mod.
+#
+# # SETUP EVENTS 			0001 - 0020
+# # RANDOM EVENT CHAINS 	1001 - 8999
+# # END EVENTS				9001 - 9020
+#
+##################################################
 
-# We can use this activity to set up state
-jkm_ec_defend_liege.0002 = {
+
+############################
+# # SETUP EVENTS 
+# # 0001 - 0020
+# #
+# # These events are used to set up the activity
+############################
+
+# 0001 - Starting a new activity
+jkm_ec_defend_liege.0001 = {
 	type = character_event
 	title = "Defend Liege"
 	left_portrait = root
 	right_portrait = root.liege
 
-	desc = {
-		desc = "You travel to your liege's court to spend time investigating his enemies. You are not sure what you will find, but you are sure that you will find something."
-	}
+	desc = jkm_ec_defend_liege.0001.t
 
 	theme = bastardy
 
+	# TODO check liege is still valid and we are still spymaster
+
 	option = {
 		name = "For the future of the realm!"
+
+		# TODO add opinion with liege
 	}
 }
 
-#########################
-#	RANDOM EVENT CHAINS	#
-#	1001 - 8999			#
-#########################
+############################
+# # RANDOM EVENT CHAINS
+# # 1001 - 8999
+#
+# # These are events which are 'pulsed' while the character is on the activity
+# # some of them are a single event, others are a chain of events
+# #
+# # 1001 - Visited by Ambitious vassal
+############################
 
-# Visited by Ambitious vassal
+# 1001 - Visited by Ambitious vassal
 jkm_ec_defend_liege.1001 = {
 	type = character_event
 	title = "Defend Liege - Ambitious Vassal"
@@ -40,6 +62,8 @@ jkm_ec_defend_liege.1001 = {
 	}
 
 	theme = bastardy
+
+	# TODO check liege is still valid and we are still spymaster
 
 	trigger = {
 		always = yes
@@ -83,10 +107,12 @@ jkm_ec_defend_liege.1001 = {
 	}
 }
 
-##################
-#	END EVENTS 	 #
-#	9001 - 9999	 #
-##################
+############################
+# # END EVENTS 
+# # 9001 - 9020
+# #
+# # These events are used to end the activity
+############################
 
 # We can use these events to complete the activity, give rewards, and clean up any state we may have set up
 jkm_ec_defend_liege.9001 = {
@@ -100,6 +126,8 @@ jkm_ec_defend_liege.9001 = {
 	}
 
 	theme = bastardy
+
+	# TODO check liege is still valid and we are still spymaster
 
 	option = {
 		name = "For the future of the realm!"
